@@ -40,6 +40,6 @@ head(nzbirths)
 You can install the released version of nzbabynames from github:
 
 ```{r install, eval = FALSE}
-install_github("ropenscilabs/nzbabynames")
+install_github("ekothe/nzbabynames")
 ```
 

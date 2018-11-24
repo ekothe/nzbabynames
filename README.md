@@ -32,7 +32,7 @@ head(maorinames)
 #> 6    Kaia Female  Maori 2015   NZ    6
 ```
 
--   `nzbirths` Data on live births from 1935-2017. Data from 1971 includes live births by sex. *Note: Data before 1991 includes New Zealand residents and overseas visitors. Data from 1991 includes New Zealand residents only.*
+-   `nzbirths` Data on live births from 1935-2017. Data from 1971 includes live births by sex. *Note: Data before 1991 includes New Zealand residents and overseas visitors. Data from 1991 includes New Zealand residents only.* (Source: Stats NZ and licensed by Stats NZ for re-use under the Creative Commons Attribution 4.0 International licence.")
 
 ``` r
 head(nzbirths)
@@ -51,5 +51,5 @@ Installation
 You can install the released version of nzbabynames from github:
 
 ``` r
-install_github("ropenscilabs/nzbabynames")
+install_github("ekothe/nzbabynames")
 ```
