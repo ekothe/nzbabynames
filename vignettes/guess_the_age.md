@@ -1,7 +1,7 @@
 ---
 title: "How to Tell Someones Age When All You Know Is Her Name"
 author: "Emily Kothe"
-date: "`r Sys.Date()`"
+date: "2018-11-25"
 output: 
   rmarkdown::html_vignette:
     keep_md: yes
@@ -11,12 +11,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+
 
 This vignette is based on this FiveThirtyEight article [How to Tell Someone’s Age When All You Know Is Her Name](https://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/#fn-1). That article demonstrated how you could use actuarial life tables and a database of baby names to estimate the age of living Americans with a given name.
 
@@ -26,7 +21,8 @@ In this vignette we use the nzbabynames data set and the NZ complete cohort actu
 
 Let's start with one name that is sterotypically 'old' - Ethel
 
-```{r message=FALSE, warning = FALSE}
+
+```r
 library(ggplot2)
 library(matrixStats)
 library(dplyr)
@@ -68,13 +64,16 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count)/sum(df$Count)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+![](C:/Users/pcmis/AppData/Local/Temp/RtmpwXSXcE/preview-193c48a4d2a.dir/guess_the_age_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+
+Ethel peaked in 1908 when 162 Ethels were born. Based on the actuarial data, 9% of Ethels born between 1900 and 2017 would still be alive in 2018. The median age of an Ethel still alive, would be 82 years.
 
 ## And a young one
 
 Let's contrast that with a 'younger' name - Brittany. 
 
-```{r message=FALSE, warning = FALSE}
+
+```r
 name_of_interest <- "Brittany"
 
 df <- life_tables %>% 
@@ -111,13 +110,16 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count)/sum(df$Count)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+![](C:/Users/pcmis/AppData/Local/Temp/RtmpwXSXcE/preview-193c48a4d2a.dir/guess_the_age_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
+Brittany peaked in 1997 when 174 Brittanys were born. Based on the actuarial data, 99% of Brittanys born between 1900 and 2017 would still be alive in 2018. The median age of an Brittany still alive, would be 23 years.
 
 ## Finally a less informative name
 
 Ethel and Brittany are both names with pretty clear trajectories. But of course some names rise and fall over time. Let's pick one of these - Joseph 
 
-```{r message=FALSE, warning = FALSE}
+
+```r
 name_of_interest <- "Joseph"
 
 df <- life_tables %>% 
@@ -154,6 +156,8 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count, na.rm=TRUE)/sum(df$Count, na.rm=TRUE)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+![](C:/Users/pcmis/AppData/Local/Temp/RtmpwXSXcE/preview-193c48a4d2a.dir/guess_the_age_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-However, note that while there is a clear peak in `r peak$Year` this name has had much more consistent consistent staying power than either Ethel or Brittany, meaning that you might be less confident about guessing the age of any given `r name_of_interest` based on name alone. Put more formally, the interquartile range (and thus uncertainty) around the estimated age for `r name_of_interest` is much greater than around Ethel or Brittany.
+Joseph peaked in 1988 when 282 Josephs were born. Based on the actuarial data, 70% of Josephs born between 1900 and 2017 would still be alive in 2018. The median age of an Joseph still alive, would be 32 years.
+
+However, note that while there is a clear peak in 1988 this name has had much more consistent consistent staying power than either Ethel or Brittany, meaning that you might be less confident about guessing the age of any given Joseph based on name alone. Put more formally, the interquartile range (and thus uncertainty) around the estimated age for Joseph is much greater than around Ethel or Brittany.
