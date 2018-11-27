@@ -4,7 +4,12 @@
 \name{nzbirths}
 \alias{nzbirths}
 \title{nzbirths}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 84 rows and 4 columns.}
+\format{A data frame:
+\describe{
+\item{Year}{Year}
+\item{Male}{Number of live births recorded as 'Male'}
+\item{Female}{Number of live births recorded as 'Female'}
+\item{Total}{Total number of live births}}}
 \usage{
 nzbirths
 }

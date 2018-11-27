@@ -31,6 +31,8 @@ library(ggplot2)
 library(matrixStats)
 library(dplyr)
 library(nzbabynames)
+library(stringr)
+library(lubridate)
 
 name_of_interest <- "Ethel"
 

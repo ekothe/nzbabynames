@@ -10,6 +10,8 @@ Description: Data on the most popular baby names in New Zealand.
 License: CC0
 Encoding: UTF-8
 LazyData: true
+URL: http://github.com/ekothe/nzbabynames
+BugReports: https://github.com/ekothe/nzbabynames/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.0
 Suggests: 

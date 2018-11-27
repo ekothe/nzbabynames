@@ -7,8 +7,8 @@
 \format{A data frame with nine variables:
 \describe{
 \item{\code{yearofbirth}}{Year of birth}
-\item{\code{sex}}{Sex}
 \item{\code{age}}{age in years}
+\item{\code{sex}}{Sex}
 \item{\code{percentile}}{percentile of the estimate}
 \item{\code{dx}}{number of deaths that would occur between integral ages}
 \item{\code{ex}}{Expected number of years of life remaining at age x}
@@ -16,7 +16,6 @@
 \item{\code{lx}}{Number alive at exact age out of 100,000 people born}
 \item{\code{mx}}{proportion of individuals of age \code{x} dying by age  \code{x+1}}
 \item{\code{px}}{Probabilty a person who reaches that age lives for the age interval}
-\item{\code{qx}}{probability of death at age \code{x}}
 \item{\code{sx}}{Proportion of age group x to x+5 surviving another 5 years}
 \item{\code{qx}}{Probabilty a person who reaches that age dies within the age interval}
 }}
