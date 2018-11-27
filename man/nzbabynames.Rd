@@ -3,7 +3,7 @@
 \docType{data}
 \name{nzbabynames}
 \alias{nzbabynames}
-\title{Baby names.}
+\title{NZ Baby names.}
 \format{A data frame with five variables: \code{Year}, \code{Sex},
 \code{Name}, \code{Count}.}
 \usage{

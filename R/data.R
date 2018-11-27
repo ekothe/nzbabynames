@@ -1,4 +1,4 @@
-#' Baby names.
+#' NZ Baby names.
 #'
 #' Full baby name data NZ. This includes all names with at
 #' least 10 uses.
