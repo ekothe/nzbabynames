@@ -1,5 +1,5 @@
 ---
-title: "How to Tell Someones Age When All You Know Is Her Name"
+title: "How to Tell Someone's Age When All You Know Is Her Name"
 author: "Emily Kothe"
 date: "`r Sys.Date()`"
 output: 
