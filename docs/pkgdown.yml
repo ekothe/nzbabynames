@@ -3,4 +3,5 @@ pkgdown: 1.2.0
 pkgdown_sha: ~
 articles:
   guess_the_age: guess_the_age.html
+  popularity_over_time: popularity_over_time.html
 

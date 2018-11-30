@@ -1,0 +1,97 @@
+---
+title: "Top 10 Names"
+author: "Emily Kothe"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+One popular way to understand baby names is to look at the most popular names 
+in any given year. 
+
+Here let's look at the Top 10 names for each year in our data set.
+
+Start by reading in the data and creating a rank for each name by Sex and Year.
+
+```{r}
+library(nzbabynames)
+library(dplyr)
+
+
+names <- nzbabynames
+
+names <- names %>% 
+  group_by(Sex, Year) %>% 
+  arrange(-Count) %>% 
+  mutate(Rank = seq_along(Count))
+
+names
+
+```
+
+Now let's filter the data set so we only have names in the Top 10 in any given year
+
+```{r}
+names_top <- names %>%
+  filter(Rank <= 10) 
+
+tail(names_top)
+```
+
+We can find the most popular names in a given year
+
+```{r}
+names_top %>% 
+  filter(Year == 1985, Rank == 1)
+```
+
+I could also plot names over time. Here I'll use ggplot2 and gganimate to plot 
+male and female names separately so it's easier to read.
+```{r}
+library(ggplot2)
+library(gganimate)
+
+names_top_female <- names_top %>%
+  filter(Sex == "Female") 
+
+time <- ggplot(names_top_female, aes(x = Rank, y = Count, fill = Name)) +
+  geom_col() + 
+  facet_wrap("Sex") +
+  geom_text(aes(label = Name), vjust = -0.5, size = 3) +
+  theme_classic() +
+  theme(legend.position="none") +
+  labs(title="{current_frame}") +
+  transition_manual(Year)
+
+animate(time, duration=120)
+```
+
+```{r}
+library(ggplot2)
+library(gganimate)
+
+names_top_male <- names_top %>%
+  filter(Sex == "Male") 
+
+time <- ggplot(names_top_male, aes(x = Rank, y = Count, fill = Name)) +
+  geom_col() + 
+  facet_wrap("Sex") +
+  geom_text(aes(label = Name), vjust = -0.5, size = 3) +
+  theme_classic() +
+  theme(legend.position="none") +
+  labs(title="{current_frame}") +
+  transition_manual(Year)
+
+animate(time, duration=120)
+```
+
