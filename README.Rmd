@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 The nzbabynames package provides the following datasets
 
-- `nzbabynames` This data set includes the sex and count of each first name from 1900 to 2017. The data set includes all names with more than 10 instances in any given year. Source: https://catalogue.data.govt.nz/dataset/baby-name-popularity-over-time/
+- `nzbabynames` This data set includes the sex and count of each first name from 1900 to 2020. The data set includes all names with more than 10 instances in any given year. Source: https://catalogue.data.govt.nz/dataset/baby-name-popularity-over-time/
 
 ```{r print-nz-babynames}
 library(nzbabynames)
@@ -29,7 +29,7 @@ head(nzbabynames)
 head(maorinames)
 ```
 
-- `nzbirths` Data on live births from 1935-2017. Data from 1971 includes live births by sex. *Note: Data before 1991 includes New Zealand residents and overseas visitors. Data from 1991 includes New Zealand residents only.* (Source: Stats NZ and licensed by Stats NZ for re-use under the Creative Commons Attribution 4.0 International licence.")
+- `nzbirths` Data on live births from 1935-2020. Data from 1971 includes live births by sex. *Note: Data before 1991 includes New Zealand residents and overseas visitors. Data from 1991 includes New Zealand residents only.* (Source: Stats NZ and licensed by Stats NZ for re-use under the Creative Commons Attribution 4.0 International licence.")
 
 ```{r print-nzbirths}
 head(nzbirths)

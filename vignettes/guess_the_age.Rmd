@@ -24,7 +24,7 @@ In this vignette we use the nzbabynames data set and the NZ complete cohort actu
 
 ## An "old" name
 
-Let's start with one name that is sterotypically 'old' - Ethel
+Let's start with one name that is stereotypically 'old' - Ethel
 
 ```{r message=FALSE, warning = FALSE}
 library(ggplot2)
@@ -70,7 +70,7 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count)/sum(df$Count)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count, na.rm = TRUE)/sum(df$Count, na.rm = TRUE)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of a living `r name_of_interest` would be `r round(med_age$wted_median, 0)` years.
 
 ## And a young one
 
@@ -113,7 +113,7 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count)/sum(df$Count)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count, na.rm = TRUE)/sum(df$Count, na.rm = TRUE)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of a living `r name_of_interest` would be `r round(med_age$wted_median, 0)` years.
 
 ## Finally a less informative name
 
@@ -156,6 +156,6 @@ ggplot(data = df, aes(x = Year)) +
   theme_classic()
 ```
 
-`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count, na.rm=TRUE)/sum(df$Count, na.rm=TRUE)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of an `r name_of_interest` still alive, would be `r round(med_age$wted_median, 0)` years.
+`r name_of_interest` peaked in `r peak$Year` when `r max` `r name_of_interest`s were born. Based on the actuarial data, `r round(sum(df$alive_count, na.rm=TRUE)/sum(df$Count, na.rm=TRUE)*100,0)`% of `r name_of_interest`s born between 1900 and 2017 would still be alive in `r lubridate::year(Sys.Date())`. The median age of a living `r name_of_interest` would be `r round(med_age$wted_median, 0)` years.
 
 However, note that while there is a clear peak in `r peak$Year` this name has had much more consistent consistent staying power than either Ethel or Brittany, meaning that you might be less confident about guessing the age of any given `r name_of_interest` based on name alone. Put more formally, the interquartile range (and thus uncertainty) around the estimated age for `r name_of_interest` is much greater than around Ethel or Brittany.
