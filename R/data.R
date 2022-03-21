@@ -38,7 +38,6 @@
 #' \item{\code{sx}}{Proportion of age group x to x+5 surviving another 5 years}
 #' \item{\code{qx}}{Probabilty a person who reaches that age dies within the age interval}
 #' }
-
 "life_tables"
 
 #' nzbirths

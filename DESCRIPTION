@@ -13,10 +13,16 @@ LazyData: true
 URL: http://github.com/ekothe/nzbabynames
 BugReports: https://github.com/ekothe/nzbabynames/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.0
+RoxygenNote: 7.1.2
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    dplyr,
+    gganimate,
+    ggplot2,
+    lubridate,
+    matrixStats,
+    stringr
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)

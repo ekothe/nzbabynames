@@ -4,12 +4,14 @@
 \name{nzbirths}
 \alias{nzbirths}
 \title{nzbirths}
-\format{A data frame:
+\format{
+A data frame:
 \describe{
 \item{Year}{Year}
 \item{Male}{Number of live births recorded as 'Male'}
 \item{Female}{Number of live births recorded as 'Female'}
-\item{Total}{Total number of live births}}}
+\item{Total}{Total number of live births}}
+}
 \usage{
 nzbirths
 }
