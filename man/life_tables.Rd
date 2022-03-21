@@ -4,7 +4,8 @@
 \name{life_tables}
 \alias{life_tables}
 \title{life_tables}
-\format{A data frame with nine variables:
+\format{
+A data frame with nine variables:
 \describe{
 \item{\code{yearofbirth}}{Year of birth}
 \item{\code{age}}{age in years}
@@ -18,7 +19,8 @@
 \item{\code{px}}{Probabilty a person who reaches that age lives for the age interval}
 \item{\code{sx}}{Proportion of age group x to x+5 surviving another 5 years}
 \item{\code{qx}}{Probabilty a person who reaches that age dies within the age interval}
-}}
+}
+}
 \usage{
 life_tables
 }

@@ -4,7 +4,7 @@ author: "Emily Kothe"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Top 10 Names}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -73,7 +73,7 @@ time <- ggplot(names_top_female, aes(x = Rank, y = Count, fill = Name)) +
   labs(title="{current_frame}") +
   transition_manual(Year)
 
-animate(time, duration=120)
+animate(time, duration=100)
 ```
 
 ```{r}
@@ -92,6 +92,6 @@ time <- ggplot(names_top_male, aes(x = Rank, y = Count, fill = Name)) +
   labs(title="{current_frame}") +
   transition_manual(Year)
 
-animate(time, duration=120)
+animate(time, duration=100)
 ```
 
