@@ -4,8 +4,10 @@
 \name{maorinames}
 \alias{maorinames}
 \title{Maori names.}
-\format{A data frame with 6 variables: \code{Name}, \code{Sex},
-\code{Source}, \code{Year}, \code{Born} and \code{Rank}}
+\format{
+A data frame with 6 variables: \code{Name}, \code{Sex},
+\code{Source}, \code{Year}, \code{Born} and \code{Rank}
+}
 \usage{
 maorinames
 }
