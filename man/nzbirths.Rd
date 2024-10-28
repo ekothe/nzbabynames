@@ -4,17 +4,19 @@
 \name{nzbirths}
 \alias{nzbirths}
 \title{nzbirths}
-\format{A data frame:
+\format{
+A data frame:
 \describe{
 \item{Year}{Year}
 \item{Male}{Number of live births recorded as 'Male'}
 \item{Female}{Number of live births recorded as 'Female'}
-\item{Total}{Total number of live births}}}
+\item{Total}{Total number of live births}}
+}
 \usage{
 nzbirths
 }
 \description{
-Data on live births from 1935-2017. Data from 1971 includes live births by
+Data on live births from 1935-2023. Data from 1971 includes live births by
 sex. \emph{Note: Data before 1991 includes New Zealand residents and overseas
 visitors. Data from 1991 includes New Zealand residents only.}
 }

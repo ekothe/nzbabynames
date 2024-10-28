@@ -1,11 +1,15 @@
 Package: nzbabynames
 Title: Data on baby names in New Zealand
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person(given = "Emily",
            family = "Kothe",
            role = c("aut", "cre"),
-           email = "emily.kothe@deakin.edu.au")
+           email = "emily.kothe@deakin.edu.au"),
+    person(given = "Sandra",
+           family = "Tanz",
+           role = "ctb"
+           email = "sandra.tanz@curtin.edu.au"))
 Description: Data on the most popular baby names in New Zealand.
 License: CC0
 Encoding: UTF-8
@@ -13,7 +17,7 @@ LazyData: true
 URL: http://github.com/ekothe/nzbabynames
 BugReports: https://github.com/ekothe/nzbabynames/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.0
+RoxygenNote: 7.3.2
 Suggests: 
     knitr,
     rmarkdown
