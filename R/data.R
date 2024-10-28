@@ -21,8 +21,8 @@
 
 #' life_tables
 #'
-#' Complete cohort life tables data as provided Stats NZ
-#'
+#' Complete cohort life tables data as provided Stats NZ from 1876-2021.
+#' @source Statistics New Zealand \url{https://www.stats.govt.nz}
 #' @format A data frame with nine variables:
 #' \describe{
 #' \item{\code{yearofbirth}}{Year of birth}

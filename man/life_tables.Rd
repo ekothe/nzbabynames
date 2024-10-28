@@ -21,10 +21,13 @@ A data frame with nine variables:
 \item{\code{qx}}{Probabilty a person who reaches that age dies within the age interval}
 }
 }
+\source{
+Statistics New Zealand \url{https://www.stats.govt.nz}
+}
 \usage{
 life_tables
 }
 \description{
-Complete cohort life tables data as provided Stats NZ
+Complete cohort life tables data as provided Stats NZ from 1876-2021.
 }
 \keyword{datasets}

@@ -6,6 +6,11 @@ Authors@R: c(
            family = "Kothe",
            role = c("aut", "cre"),
            email = "emily.kothe@deakin.edu.au"),
+   person(given = "Rob", 
+          family = "Hyndman", 
+          role = "ctb",
+          email = "Rob.Hyndman@monash.edu", 
+          comment = c(ORCID = "0000-0002-2140-5352")),
     person(given = "Sandra",
            family = "Tanz",
            role = "ctb"
