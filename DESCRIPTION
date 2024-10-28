@@ -10,8 +10,11 @@ Authors@R: c(
           family = "Hyndman", 
           role = "ctb",
           email = "Rob.Hyndman@monash.edu", 
-          comment = c(ORCID = "0000-0002-2140-5352"))
-   )
+          comment = c(ORCID = "0000-0002-2140-5352")),
+    person(given = "Sandra",
+           family = "Tanz",
+           role = "ctb"
+           email = "sandra.tanz@curtin.edu.au"))
 Description: Data on the most popular baby names in New Zealand.
 License: CC0
 Encoding: UTF-8
