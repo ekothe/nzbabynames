@@ -25,7 +25,13 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    dplyr,
+    gganimate,
+    ggplot2,
+    lubridate,
+    matrixStats,
+    stringr
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
